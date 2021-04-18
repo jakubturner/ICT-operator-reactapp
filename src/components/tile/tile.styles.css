@@ -2,7 +2,7 @@
 .tile-container {
     display: flex;
     flex-direction: column;
-    background-color: #95dada;
+    background-color: #e7e0b5;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 25px;
@@ -15,4 +15,6 @@
 
 .tile-container:hover {
     transform: scale(1.05);
+    background-color: aquamarine;
+    box-shadow: 5px 10px #888888;
 }
