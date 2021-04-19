@@ -2,6 +2,8 @@ import React from "react";
 import './App.css';
 import {Switch, Route} from "react-router-dom"
 import HomePage from './pages/homepage.component'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
 
