@@ -16,15 +16,11 @@ const Tile = props => {
     const [showModal, setShowModal] = useState(false)
 
     return (<>
-        <div className='tile-container' onClick={()=> setShowModal(true) } >
-            <h1>{props.parkingLot.properties.name}</h1>
-            <h2>{props.parkingLot.properties.parking_type.description}</h2>
-        </div>
-                <Modal show={showModal} onHide={handleClose}>
+                <Modal className='modal' show={showModal} onHide={handleClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Modal heading</Modal.Title>
+                        <Modal.Title >Detailni informace</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
+                    <Modal.Body className='modal-body'>
                         <ParkingDetail data={props.parkingLot}/>
                     </Modal.Body>
                     <Modal.Footer>
@@ -33,6 +29,10 @@ const Tile = props => {
                         </Button>
                     </Modal.Footer>
                 </Modal>
+            <div className='tile-container' onClick={()=> setShowModal(true) } >
+                <h1 className='tile-name'>{props.parkingLot.properties.name}</h1>
+                <h2 className='tile-type'>{props.parkingLot.properties.parking_type.description}</h2>
+            </div>
         </>
     )}
 

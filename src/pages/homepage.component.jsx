@@ -1,10 +1,15 @@
 import React, {useEffect, useState} from "react";
+import {SearchBox, handleChange} from "../components/searchBox/search.component";
 import TileList from '../components/tile-list/tile-list.component'
 
 
 const HomePage = () => {
 
     const [parkingLots, setParkingLots] = useState()
+    const [search, setSearch] = useState()
+    // const [filteredParkingsLot, setFilteredParkingsLot] = useState([])
+
+
 
     useEffect( ()=>{
 
@@ -20,9 +25,19 @@ const HomePage = () => {
         fetchData()
     }, [])
 
+  // const filteredParkings = parkingLots.filter(parkinglot =>{
+  //    return  parkinglot.properties.name.toLoweCase().includes(search.toLowerCase())
+  // })
+
   if (!parkingLots) return null
-    return (
+    return ( <>
+        <SearchBox
+            placeholder='Hledej parkoviste'
+            onChange={e => setSearch(e.target.value)}
+
+        />
     <TileList parkingLots={parkingLots}/>
+        </>
 )}
 
 export default HomePage

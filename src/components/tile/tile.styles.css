@@ -1,20 +1,61 @@
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.modal-title{
+       text-align: center !important;
+    font-family: 'Roboto' ;
+}
+
+.tile-name{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+}
+.tile-type{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+
+    color: #000000;
+
+
+}
+
+
+
+.modal-body{
+    text-align: center;
+    background-color: #FAFBFD;
+}
 
 .tile-container {
     display: flex;
     flex-direction: column;
-    background-color: #e7e0b5;
-    border: 1px solid grey;
-    border-radius: 5px;
+    background-color:#EAF0FE;
     padding: 25px;
     cursor: pointer;
     -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
+    text-align: center;
+    opacity: 0.67;
+    border-radius: 8px;
+    min-height: 180px;
+    min-width: 280px;
+
 }
 
 .tile-container:hover {
     transform: scale(1.05);
-    background-color: aquamarine;
-    box-shadow: 5px 10px #888888;
+    background: #5D76FA;
+    opacity: 0.4;
+    box-shadow: 0px 10px 20px rgba(21, 21, 21, 0.15);
+    border-radius: 8px;
 }
